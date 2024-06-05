@@ -19,6 +19,7 @@ init(autoreset=True)
 def main():
     print(f"What would you like to do?")
     watcha_doin()
+    
 # THIS WILL BACKUP THE CURRENT /ETC/HOSTS ONLY ON INTIAL EXECUTION
 def backup_hosts():
     original = '/etc/hosts'
@@ -164,8 +165,7 @@ def get_rando():
         for lulz in file:
             lulz = lulz.rstrip()
             print(lulz)
-
-
+            
 # I PITTY THE FOOL!
 def get_mrT():
     with open('/usr/local/bin/lul/mrt.txt', mode='r') as file:
