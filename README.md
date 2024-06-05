@@ -5,7 +5,7 @@
     <td>
       <h3>Tired of using sudo vim /etc/hosts???</h3>
       <h3>Try h0sts.py instead!</h3>
-      <p>A pythonic /etc/hosts updater for HTB users with a little spice added 🌶️🌶️🌶️.</p>
+      <p>A pythonic /etc/hosts updater for HTB users with a little spice added 🌶️🌶️🌶️</p>
       <blockquote>
         <ol>
           <li>Copy the script and lul folder into your /usr/local/bin/ directory</li>
