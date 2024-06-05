@@ -20,7 +20,7 @@ def main():
     print(f"What would you like to do?")
     watcha_doin()
     
-# THIS WILL BACKUP THE CURRENT /ETC/HOSTS ONLY ON INTIAL EXECUTION
+# THIS WILL BACKUP THE CURRENT /ETC/HOSTS ON EXECUTION
 def backup_hosts():
     original = '/etc/hosts'
     backup = '/etc/hosts.backup'
