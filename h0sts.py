@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 # Author: Cyb3rW1ll
-# Created: 6/24/2023
-# Revised:
+# Created: 5/24/2023
+# Revised: 6/7/2024
 
 import re
 import sys
