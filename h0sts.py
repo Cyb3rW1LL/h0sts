@@ -2,7 +2,7 @@
 
 # Author: Cyb3rW1ll
 # Created: 5/24/2023
-# Revised: 6/7/2024
+# Revised: 6/8/2024
 
 import re
 import sys
@@ -78,7 +78,7 @@ def get_hosts():
         print(f'\n',"Here's the current list of hosts:")
         count = 0
         table = PrettyTable()
-        table.field_names = [Fore.RED + 'Line' + Style.RESET_ALL,Fore.BLUE + 'IP' + Style.RESET_ALL, Fore.BLUE + 'Domain(s)' + Style.RESET_ALL]
+        table.field_names = [Fore.RED + 'No.' + Style.RESET_ALL,Fore.BLUE + 'IP' + Style.RESET_ALL, Fore.BLUE + 'Domain(s)' + Style.RESET_ALL]
         for ips,domains in match_dict.items():
             count += 1
             table.add_row([Fore.RED + str(count) + Style.RESET_ALL,Fore.WHITE + ips + Style.RESET_ALL, Fore.WHITE + domains + Style.RESET_ALL])
