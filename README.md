@@ -3,7 +3,7 @@
 <table>
   <tr>
     <td>
-      <h3>Tired of using sudo vim /etc/hosts???</h3>
+      <h3>Tired of using 'sudo vim /etc/hosts???'</h3>
       <h3>Try h0sts.py instead!</h3>
       <p>A pythonic /etc/hosts updater for HTB users with a little spice added 🌶️🌶️🌶️</p>
       <blockquote>
@@ -24,6 +24,6 @@
 </table>
 
 ### It even has fancy colors and is nicely formatted!!!
-<p align="left">
+<p align="center">
  <img width=85% height=85% src=https://github.com/Cyb3rW1LL/h0sts/assets/39623516/98e98b9f-0b05-4456-934f-f8ef7f5d045d>
 </p>
