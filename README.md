@@ -1,6 +1,6 @@
 # #h0sts.py
 
-<table>
+<table align="center">
   <tr>
     <td>
       <h3>Tired of using 'sudo vim /etc/hosts???'</h3>
