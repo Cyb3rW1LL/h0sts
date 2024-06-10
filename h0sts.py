@@ -32,7 +32,7 @@ def backup_hosts():
         print(f'Source file {original} does not exist. No backup created.')
 
 # MAKE A CHOICE FOOL (WITH A SECRECT BUILT IN!!!)
-# UPDATE IS CURRENTLY UNDER DEV WITH OTHER FIXES AND UPDATES AS WELL
+# UPDATE IS CURRENTLY UNDER DEV WITH OTHER FIXES AS WELL
 def watcha_doin():
     options = {'1.': 'Add' , '2.': 'Delete', '3.': 'Update', '4.': 'Exit'}
     for k,v in options.items():
@@ -116,11 +116,11 @@ def del_host():
         s_pattern = re.compile(r'([\da-fA-F.:]+)\s+([^\n]+)?')
         match_index = s_pattern.findall(content)
         #print(match_index)
-        match_dict = dict(match_index)
+        #match_dict = dict(match_index)
         #print(match_dict)
-        ips = match_dict.keys()
+        #ips = match_dict.keys()
         #print(ips)
-        domains = match_dict.values()
+        #domains = match_dict.values()
         #print(domains)
         user_input = input('Remove which line entry?')
         index = int(user_input) -1
