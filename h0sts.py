@@ -2,7 +2,6 @@
 
 # Author: Cyb3rW1ll
 # Created: 5/24/2023
-# Revised: 6/8/2024
 
 import re
 import sys
