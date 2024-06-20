@@ -3,7 +3,7 @@
 <table align="center">
   <tr>
     <td>
-      <h3>Tired of using 'sudo vim /etc/hosts???'</h3>
+      <h3>Tired of using 'sudo vim /etc/hosts???'in TryHackMe and HackTheBox???</h3>
       <h3>Try h0sts.py instead!</h3>
       <p>A pythonic /etc/hosts updater for HTB users with a little spice added 🌶️🌶️🌶️</p>
       <blockquote>
