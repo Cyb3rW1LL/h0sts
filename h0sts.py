@@ -30,7 +30,7 @@ def backup_hosts():
     else:
         print(f'Source file {original} does not exist. No backup created.')
 
-# MAKE A CHOICE FOOL (WITH A SECRECT BUILT IN!!!)
+# MAKE A CHOICE FOOL (WITH A SECRET BUILT IN!!!)
 # UPDATE IS CURRENTLY UNDER DEV WITH OTHER FIXES AS WELL
 def watcha_doin():
     options = {'1.': 'Add' , '2.': 'Delete', '3.': 'Update', '4.': 'Exit'}
