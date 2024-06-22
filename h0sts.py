@@ -64,14 +64,10 @@ def get_hosts():
     with open('/etc/hosts', mode='r') as file:
         hostfile = file.read()
         lines = re.split(r'\n', hostfile)
-#        for i in lines:                                        #test print to read ASCII ouput
-#            print(f'{i}')
         file.close()
         s_pattern = re.compile(r'([\da-fA-F.:]+)\s+([^\n]+)?')
         match_index = s_pattern.findall(hostfile)
-#       print(match_index)
         match_dict = dict(match_index)
-#       print(match_dict)
         ips = match_dict.keys()
         domains = match_dict.values()
         print(f'\n',"Here's the current list of hosts:")
@@ -111,16 +107,8 @@ def del_host():
     with open('/etc/hosts', mode='r') as hosts:
         content = hosts.read()
         hosts.close()
-        #print(lines[0])
         s_pattern = re.compile(r'([\da-fA-F.:]+)\s+([^\n]+)?')
         match_index = s_pattern.findall(content)
-        #print(match_index)
-        #match_dict = dict(match_index)
-        #print(match_dict)
-        #ips = match_dict.keys()
-        #print(ips)
-        #domains = match_dict.values()
-        #print(domains)
         user_input = input('Remove which line entry?')
         index = int(user_input) -1
         if 0 <= index < len(match_index): 
