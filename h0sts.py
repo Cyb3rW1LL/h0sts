@@ -58,9 +58,9 @@ def watcha_doin():
         time.sleep(1)
         main()
 
-#GET DEM DIGITS, BRUH
+# GET DEM DIGITS, BRUH
 def get_hosts():
-    #/ETC/HOSTS CURRENT CONTENTS, MY DUDE
+    # /ETC/HOSTS CURRENT CONTENTS, MY DUDE
     with open('/etc/hosts', mode='r') as file:
         hostfile = file.read()
         lines = re.split(r'\n', hostfile)
@@ -79,7 +79,7 @@ def get_hosts():
             table.add_row([Fore.RED + str(count) + Style.RESET_ALL,Fore.WHITE + ips + Style.RESET_ALL, Fore.WHITE + domains + Style.RESET_ALL])
         print(table)
 
-#ADD THEM DIGITS, YEET!
+# ADD THEM DIGITS, YEET!
 def add_host():
     print(f'\n Enter IP')
     ip = input(f'IP:')
