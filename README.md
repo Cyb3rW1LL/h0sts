@@ -8,11 +8,11 @@
       <blockquote>
         <ol>
           <li>Copy the script and lul folder into your /usr/local/bin/ directory</li>
-          <li><code>extract 'lul.7z'(no password, can be scanned first)</code></li>
-          <li>Remove the lul.7z archive if you would like</li>
+          <li>extract 'lul.7z' (no password, can be scanned first)</li>
+          <li><code>sudo rm lul.7z</code>(to remove lul.7z once finished extracting)</li>
           <li><code>chmod +x h0sts.py</code></li>
-          <li><code>export PATH=$PATH:/usr/local/bin/h0sts.py</code> (if you choose)</li>
-          <li><code>'sudo h0sts.py' from anywhere</code></li>
+          <li><code>export PATH=$PATH:/usr/local/bin/h0sts.py</code>(if you choose)</li>
+          <li><code>sudo h0sts.py</code> from anywhere </li>
         </ol>
       </blockquote>
     </td>
