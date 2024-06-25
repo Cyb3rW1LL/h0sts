@@ -198,7 +198,6 @@ def get_rando():
             lulz = lulz.rstrip()
             print(lulz)
 
-
 # I PITTY THE FOOL!
 def get_mrT():
     with open('/usr/local/bin/lul/mrt.txt', mode='r') as file:
