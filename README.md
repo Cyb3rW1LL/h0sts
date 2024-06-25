@@ -1,8 +1,7 @@
 # #h0sts.py
 
-<table align="center">
-  <tr>
-    <td>
+
+  <td style="border: none;">
       <h3>Tired of using 'sudo vim /etc/hosts' in "TryHackMe" and "Hack The Box???"</h3>
       <h3>Try h0sts.py instead!</h3>
       <p>A pythonic /etc/hosts updater for HTB users with a little spice added 🌶️🌶️🌶️</p>
@@ -17,11 +16,9 @@
         </ol>
       </blockquote>
     </td>
-    <td>
-      <img src="https://github.com/Cyb3rW1LL/h0sts/assets/39623516/cc9e9692-d669-4b5e-83e5-69292f9dac8c" alt="Example Image" style="width:200px;">
-    </td>
-  </tr>
-</table>
+    <td style="border: none;">
+  </td>
+
 
 ### It even has fancy colors and is nicely formatted!!!
 <p align="center">
