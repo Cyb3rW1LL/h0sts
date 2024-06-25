@@ -167,7 +167,7 @@ def update_hosts():
         else:
             print("That is not a valid entry. Please try again.")
             update_hosts()
-        print(sublist) #update successful
+        #print(sublist) #update successful
         try:
             with open('/etc/hosts', mode='w') as file:
                 for i in sublist:
