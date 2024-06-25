@@ -2,6 +2,8 @@
 
 # Author: Cyb3rW1ll
 # Created: 5/24/2023
+# Revised: 6/25/2024
+# UPDATES ARE CURRENTLY UNDER DEV WITH OTHER FIXES AS WELL
 
 import re
 import sys
@@ -18,8 +20,7 @@ init(autoreset=True)
 def main():
     print(f"What would you like to do?")
     watcha_doin()
-    
-# THIS WILL BACKUP THE CURRENT /ETC/HOSTS ON EXECUTION
+# THIS WILL BACKUP THE CURRENT /ETC/HOSTS ONLY ON INTIAL EXECUTION
 def backup_hosts():
     original = '/etc/hosts'
     backup = '/etc/hosts.backup'
@@ -30,8 +31,7 @@ def backup_hosts():
     else:
         print(f'Source file {original} does not exist. No backup created.')
 
-# MAKE A CHOICE FOOL (WITH A SECRET BUILT IN!!!)
-# UPDATE IS CURRENTLY UNDER DEV WITH OTHER FIXES AS WELL
+# MAKE A CHOICE FOOL (WITH A SECRECT BUILT IN!!!)
 def watcha_doin():
     options = {'1.': 'Add' , '2.': 'Delete', '3.': 'Update', '4.': 'Exit'}
     for k,v in options.items():
@@ -43,9 +43,7 @@ def watcha_doin():
     elif uinput == '2' or uinput == 'Delete' or uinput == 'del':
         del_host()
     elif uinput == '3' or uinput == 'Update' or uinput == 'up':
-        print("gatcha3")
-        #update_hosts()
-        exit()
+        update_hosts()
     elif uinput == '4' or uinput == 'Exit' or uinput == 'ex':
         print(f'\nK, thx, bb!!\n')
         exit()
@@ -58,9 +56,9 @@ def watcha_doin():
         time.sleep(1)
         main()
 
-# GET DEM DIGITS, BRUH
+#GET DEM DIGITS, BRUH
 def get_hosts():
-    # /ETC/HOSTS CURRENT CONTENTS, MY DUDE
+    #/ETC/HOSTS CURRENT CONTENTS, MY DUDE
     with open('/etc/hosts', mode='r') as file:
         hostfile = file.read()
         lines = re.split(r'\n', hostfile)
@@ -79,7 +77,7 @@ def get_hosts():
             table.add_row([Fore.RED + str(count) + Style.RESET_ALL,Fore.WHITE + ips + Style.RESET_ALL, Fore.WHITE + domains + Style.RESET_ALL])
         print(table)
 
-# ADD THEM DIGITS, YEET!
+#ADD THEM DIGITS, YEET!
 def add_host():
     print(f'\n Enter IP')
     ip = input(f'IP:')
@@ -141,6 +139,53 @@ def del_host():
         get_hosts()
         main()
 
+# GOTTA UPDATE THOSE HOSTS!!!
+def update_hosts():
+    get_hosts()
+    with open('/etc/hosts', mode='r') as file:
+        contents= file.read()
+        entries = re.split(r'[\n]', contents)
+        search = re.compile(r'([^\s]+)')
+        sublist = []
+        for i in entries:
+            matches = search.findall(i)
+            if matches:
+                sublist.append(matches)
+        print(sublist)
+        get_index = input("Which entry number do you need to update?")
+        entry = int(get_index)-1
+        count = 0
+        for i in sublist[entry]:
+            count += 1
+            print(f'{count}. {i}')
+        user_choice = input("Which entry would you like to update?")
+        choice = int(user_choice)-1
+        if 0 <= choice < len(sublist[entry]):
+            update_entry = input("Please enter your update: ")
+            sublist[entry][choice] = update_entry
+            get_hosts()
+        else:
+            print("That is not a valid entry. Please try again.")
+            update_hosts()
+        print(sublist) #update successful
+        try:
+            with open('/etc/hosts', mode='w') as file:
+                for i in sublist:
+                    ip = i[0]
+                    host = i[1:]
+                    if len(ip) > 7:
+                        file.write(f"{ip}\t{' '.join(host)}\n")
+                    else:
+                        file.write(f"{ip}\t\t{' '.join(host)}\n")
+                    print(f'/etc/hosts sucessfully updated')
+        except PermissionError:
+            print(f'Please run the updater with sudo priveleges.')
+        except Exception as e:
+            print(f'Error, please run the updater again: {e}')
+            file.close()
+    get_hosts()
+    main()
+
 # LEMME GET DEM LULZ, BRUH
 def get_rando():
     rando = ['/usr/local/bin/lul/lul1.txt', '/usr/local/bin/lul/lul2.txt', '/usr/local/bin/lul/lul3.txt', '/usr/local/bin/lul/lul4.txt', '/usr/local/bin/lul/lul5.txt',
@@ -152,7 +197,8 @@ def get_rando():
         for lulz in file:
             lulz = lulz.rstrip()
             print(lulz)
-            
+
+
 # I PITTY THE FOOL!
 def get_mrT():
     with open('/usr/local/bin/lul/mrt.txt', mode='r') as file:
