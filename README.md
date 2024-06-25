@@ -13,6 +13,8 @@
           <li><code>chmod +x h0sts.py</code></li>
           <li><code>export PATH=$PATH:/usr/local/bin/h0sts.py</code>(if you choose)</li>
           <li><code>sudo h0sts.py</code> from anywhere </li>
+          <li><code>ctrl + shift + v</code>to cleanly copy-paste from your Red Team/Pentest notes into the terminal</li>
+          <li>hint: Option '5' allows you to spam the memes</li>
         </ol>
       </blockquote>
     </td>
