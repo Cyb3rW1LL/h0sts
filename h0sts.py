@@ -166,6 +166,7 @@ def update_hosts():
             get_hosts()
         else:
             print("That is not a valid entry. Please try again.")
+            time.sleep(1)
             update_hosts()
         #print(sublist) #update successful
         try:
