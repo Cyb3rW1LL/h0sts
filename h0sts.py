@@ -151,7 +151,7 @@ def update_hosts():
             matches = search.findall(i)
             if matches:
                 sublist.append(matches)
-        print(sublist)
+        #print(sublist)
         get_index = input("Which entry number do you need to update?")
         entry = int(get_index)-1
         count = 0
