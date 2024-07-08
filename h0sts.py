@@ -37,14 +37,14 @@ def watcha_doin():
     for k,v in options.items():
         print(f'{k} {v}')
     uinput = str(input("Choose:"))
-    if uinput == '1' or uinput == 'Add' or uinput == 'add':
+    if uinput == '1' or uinput == 'Add' or uinput == 'add' or uinput == 'a' or uinput == 'A':
         get_hosts()
         add_host()
-    elif uinput == '2' or uinput == 'Delete' or uinput == 'del':
+    elif uinput == '2' or uinput == 'Delete' or uinput == 'del' or uinput == 'd' or uinput == 'D':
         del_host()
-    elif uinput == '3' or uinput == 'Update' or uinput == 'up':
+    elif uinput == '3' or uinput == 'Update' or uinput == 'up' or uinput == 'u' or uinput == 'U':
         update_hosts()
-    elif uinput == '4' or uinput == 'Exit' or uinput == 'ex':
+    elif uinput == '4' or uinput == 'Exit' or uinput == 'ex' or uinput == 'e' or uinput == 'E':
         print(f'\nK, thx, bb!!\n')
         exit()
     elif uinput == '5':
