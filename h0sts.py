@@ -2,7 +2,7 @@
 
 # Author: Cyb3rW1ll
 # Created: 5/24/2023
-# Revised: 7/8/2024
+# Revised: 8/1/2024
 # UPDATES ARE CURRENTLY UNDER DEV WITH OTHER FIXES AS WELL
 
 import re
@@ -151,7 +151,6 @@ def update_hosts():
             matches = search.findall(i)
             if matches:
                 sublist.append(matches)
-        #print(sublist)
         get_index = input("Which entry number do you need to update?")
         entry = int(get_index)-1
         count = 0
@@ -168,7 +167,6 @@ def update_hosts():
             print("That is not a valid entry. Please try again.")
             time.sleep(1)
             update_hosts()
-        #print(sublist) #update successful
         try:
             with open('/etc/hosts', mode='w') as file:
                 for i in sublist:
@@ -192,7 +190,7 @@ def get_rando():
     rando = ['/usr/local/bin/lul/lul1.txt', '/usr/local/bin/lul/lul2.txt', '/usr/local/bin/lul/lul3.txt', '/usr/local/bin/lul/lul4.txt', '/usr/local/bin/lul/lul5.txt',
              '/usr/local/bin/lul/lul6.txt', '/usr/local/bin/lul/lul7.txt', '/usr/local/bin/lul/lul8.txt', '/usr/local/bin/lul/lul9.txt', '/usr/local/bin/lul/lul10.txt',
              '/usr/local/bin/lul/lul11.txt','/usr/local/bin/lul/lul12.txt', '/usr/local/bin/lul/lul13.txt', '/usr/local/bin/lul/lul14.txt', '/usr/local/bin/lul/lul15.txt',
-             '/usr/local/bin/lul/lul16.txt', '/usr/local/bin/lul/lul17.txt', '/usr/local/bin/lul/lul18.txt', '/usr/local/bin/lul/lul19.txt']
+             '/usr/local/bin/lul/lul16.txt', '/usr/local/bin/lul/lul17.txt', '/usr/local/bin/lul/lul18.txt', '/usr/local/bin/lul/lul19.txt', '/usr/local/bin/lul/mrt.txt']
     random_lulz = random.choice(rando)
     with open(random_lulz, mode='r') as file:
         for lulz in file:
